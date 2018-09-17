@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Consumer } from '../../context';
 import TextInputGroup from '../layout/TextInputGroup';
-import uuid from 'uuid';
 import axios from 'axios';
 
 class AddContact extends Component {
@@ -48,7 +47,7 @@ class AddContact extends Component {
 
     dispatch({
       type: 'ADD_CONTACT',
-      payload: newContact
+      payload: res.data
     });
 
 
